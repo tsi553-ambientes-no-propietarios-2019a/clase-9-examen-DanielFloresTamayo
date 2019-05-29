@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.2
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 29-05-2019 a las 02:32:05
+-- Versión del servidor: 10.1.34-MariaDB
+-- Versión de PHP: 7.2.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `prueba`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `rol` varchar(255) NOT NULL,
+  `username` varchar(80) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `nombre`, `rol`, `username`, `password`) VALUES
+(2, 'AKI', 'Javier', 'administrador', '202cb962ac59075b964b07152d234b70'),
+(4, 'AKI', 'administrador', 'Javier', '202cb962ac59075b964b07152d234b70'),
+(5, 'TOYOTA', 'cliente', 'Joel', '250cf8b51c773f3f8dc8b4be867a9a02'),
+(6, 'INTEL', 'cliente', 'Daniel', '68053af2923e00204c3ca7c6a3150cf7'),
+(7, 'SONY', 'administrador', 'Jessi', '68053af2923e00204c3ca7c6a3150cf7'),
+(8, 'KINGS', 'cliente', 'Jenny', '2e65f2f2fdaf6c699b223c61b1b5ab89');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `usuario unico` (`username`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
